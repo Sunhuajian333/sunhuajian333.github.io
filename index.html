@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#08060a" />
+    <meta name="description" content="滚轮驱动的沉浸式作品集首屏实验。" />
+    <title>孙华建｜视觉设计作品集</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+    <script type="module" crossorigin src="/assets/index-BZIK8hwD.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CMbXxe6E.css">
+  </head>
+  <body>
+    <div class="loader" id="loader" aria-live="polite">
+      <div class="loader-orb loader-orb-a"></div><div class="loader-orb loader-orb-b"></div>
+      <p class="loader-logo">孙华建 · 视觉设计师</p>
+      <p class="loader-tag">Visual stories in motion</p>
+      <div class="loader-track"><span id="loaderBar"></span></div>
+      <p class="loader-percent" id="loaderPercent">0%</p>
+    </div>
+
+    <header class="nav" id="nav">
+      <a class="logo" href="#hero"><span class="logo-orbit">◎</span>孙华建 · 视觉设计师</a>
+      <nav class="nav-links" aria-label="主导航">
+        <a href="#categories">作品</a><a href="#about">关于</a><a class="nav-cta glass" href="#contact">联系我</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-scroll" id="hero">
+        <div class="hero-sticky">
+          <canvas id="heroCanvas" class="hero-video" aria-label="滚动驱动的封面影片"></canvas>
+          <div class="hero-gradient"></div>
+          <div class="hero-copy" id="heroCopy">
+            <p class="eyebrow"><span></span>Visual Designer · Chongqing</p>
+            <h1 class="hero-title"><span class="hero-title-primary">让设计成为</span><span class="hero-title-secondary">品牌与人之间的引力</span></h1>
+            <p class="hero-desc">孙华建，视觉设计师。专注品牌、包装、电商与三维视觉，<br />用策略和审美把复杂信息转化为清晰、有温度的视觉体验。</p>
+            <div class="actions"><a class="glass glass-button" href="#categories">浏览作品 <b>↓</b></a><a class="glass glass-link" href="#about">了解设计师</a></div>
+          </div>
+          <div class="scroll-hint" id="scrollHint"><span class="scroll-dot"></span><small>滚动控制影片</small></div>
+          <p class="side-label">Scroll-driven visual experience · 001—307</p>
+          <div class="progress"><span id="progressBar"></span></div>
+          <div class="center-reveal" id="centerReveal" aria-hidden="true">
+            <div class="reveal-grid"></div>
+            <div class="reveal-copy" id="revealCopy">
+              <p>SELECTED WORKS · 2016—2026</p>
+              <h2>以视觉为语言<br /><em>让想法发生。</em></h2>
+              <a class="glass glass-button" href="#categories">浏览作品 <b>↓</b></a>
+            </div>
+            <span class="reveal-edge reveal-edge-left"></span>
+            <span class="reveal-edge reveal-edge-right"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="category-screen" id="categories">
+        <div class="category-head">
+          <div><p class="section-kicker">Creative disciplines</p><h2>我的设计栏目</h2></div>
+          <p>移动鼠标探索不同领域<br />点击栏目进入对应作品</p>
+        </div>
+        <div class="accordion-gallery" id="accordionGallery">
+          <a class="accordion-item" href="#brand-archive" data-index="0" style="--image:url('/works/brand-all/01.jpg')">
+            <span class="accordion-number">01</span><div class="accordion-shade"></div><div class="accordion-label"><small>Brand Visual</small><h3>品牌设计</h3><p>品牌识别、活动视觉与空间应用</p></div><span class="accordion-arrow glass">↗</span>
+          </a>
+          <a class="accordion-item" href="#packaging-showcase" data-index="1" style="--image:url('/works/zhu-duan/01.webp')">
+            <span class="accordion-number">02</span><div class="accordion-shade"></div><div class="accordion-label"><small>Packaging</small><h3>包装设计</h3><p>包装系统、产品矩阵与货架视觉</p></div><span class="accordion-arrow glass">↗</span>
+          </a>
+          <a class="accordion-item active" href="#ecommerce-showcase" data-index="2" style="--image:url('/works/details-priority/01.jpg')">
+            <span class="accordion-number">03</span><div class="accordion-shade"></div><div class="accordion-label"><small>E-commerce</small><h3>电商设计</h3><p>详情页、活动主视觉与销售转化</p></div><span class="accordion-arrow glass">↗</span>
+          </a>
+          <a class="accordion-item" href="#aigc-showcase" data-index="3" style="--image:url('/frames/frame-0180.webp')">
+            <span class="accordion-number">04</span><div class="accordion-shade"></div><div class="accordion-label"><small>Generative Visual</small><h3>AIGC</h3><p>生成式影像、创意实验与动态叙事</p></div><span class="accordion-arrow glass">↗</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="aigc-showcase reference-motion" id="aigc-showcase" aria-label="AIGC 动态影像作品">
+        <div class="aigc-motion-shell" id="aigcMotionShell">
+          <div class="aigc-outro-copy aigc-outro-left"><small>AIGC / MOTION STUDY</small><h3>生成<br />新境</h3></div>
+          <div class="aigc-outro-copy aigc-outro-right"><p>以设计思维驾驭生成<br />让想象成为可见的现实</p><span>TEXT TO VIDEO · 60 FPS</span></div>
+          <div class="aigc-motion-canvas">
+            <div class="aigc-chapter aigc-chapter-one">
+              <video data-aigc-video="0" src="/aigc/chongqing-raw.mp4" muted playsinline preload="auto"></video>
+              <div class="aigc-motion-shade"></div>
+              <h2><span>生成</span><span>新境</span></h2>
+              <p>以设计思维驾驭生成<br />让想象成为可见的现实</p>
+            </div>
+            <div class="aigc-chapter aigc-chapter-two">
+              <video data-aigc-video="1" src="/aigc/chongqing-night-storyboard.mp4" muted playsinline preload="auto"></video>
+              <div class="aigc-motion-shade"></div>
+              <h2><span>生成</span><span>新境</span></h2>
+              <p>以设计思维驾驭生成<br />让想象成为可见的现实</p>
+            </div>
+            <div class="aigc-motion-top"><span>AIGC / CHONGQING</span><span>FILM · EXPERIMENT · 2026</span></div>
+            <div class="aigc-motion-bottom"><span id="aigcProgress">CHAPTER 01 / 04</span><span>SCROLL DOWN</span></div>
+          </div>
+          <div class="aigc-motion-next">
+            <video data-aigc-video="2" src="/aigc/portrait-study-v2.mp4" muted playsinline preload="metadata"></video>
+            <div class="aigc-motion-shade"></div>
+            <div class="aigc-next-label"><span>FILM 03 · 2026</span></div>
+          </div>
+          <div class="aigc-cycle-track"><span id="aigcCycleBar"></span></div>
+        </div>
+      </section>
+
+      <section class="ai-photo-wall" id="aigc-photo-wall" aria-labelledby="aiPhotoWallTitle">
+        <header class="ai-photo-wall-head">
+          <div>
+            <p class="section-kicker">AI Photography · Selected experiments</p>
+            <h2 id="aiPhotoWallTitle">AI 摄影棚</h2>
+          </div>
+          <p>食物质感、光影与商业氛围的生成探索</p>
+        </header>
+
+        <div class="ai-photo-marquee ai-photo-marquee-top">
+          <div class="ai-photo-track">
+            <div class="ai-photo-set">
+              <img class="ai-photo-card ai-photo-card-tall" src="/aigc/photography/photo-01.webp" alt="AI 美食摄影作品 01" loading="lazy" />
+              <img class="ai-photo-card ai-photo-card-wide" src="/aigc/photography/photo-02.webp" alt="AI 美食摄影作品 02" loading="lazy" />
+              <img class="ai-photo-card" src="/aigc/photography/photo-03.webp" alt="AI 美食摄影作品 03" loading="lazy" />
+              <img class="ai-photo-card ai-photo-card-tall" src="/aigc/photography/photo-04.webp" alt="AI 美食摄影作品 04" loading="lazy" />
+              <img class="ai-photo-card ai-photo-card-tall" src="/aigc/photography/photo-05.webp" alt="AI 美食摄影作品 05" loading="lazy" />
+              <img class="ai-photo-card" src="/aigc/photography/photo-06.webp" alt="AI 美食摄影作品 06" loading="lazy" />
+              <img class="ai-photo-card ai-photo-card-tall" src="/aigc/photography/photo-07.webp" alt="AI 美食摄影作品 07" loading="lazy" />
+              <img class="ai-photo-card" src="/aigc/photography/photo-08.webp" alt="AI 美食摄影作品 08" loading="lazy" />
+              <img class="ai-photo-card ai-photo-card-square" src="/aigc/photography/photo-09.webp" alt="AI 美食摄影作品 09" loading="lazy" />
+              <img class="ai-photo-card ai-photo-card-tall" src="/aigc/photography/photo-10.webp" alt="AI 美食摄影作品 10" loading="lazy" />
+              <img class="ai-photo-card" src="/aigc/photography/photo-11.webp" alt="AI 美食摄影作品 11" loading="lazy" />
+              <img class="ai-photo-card ai-photo-card-tall" src="/aigc/photography/photo-12.webp" alt="AI 美食摄影作品 12" loading="lazy" />
+            </div>
+            <div class="ai-photo-set" aria-hidden="true">
+              <img class="ai-photo-card ai-photo-card-tall" src="/aigc/photography/photo-01.webp" alt="" loading="lazy" />
+              <img class="ai-photo-card ai-photo-card-wide" src="/aigc/photography/photo-02.webp" alt="" loading="lazy" />
+              <img class="ai-photo-card" src="/aigc/photography/photo-03.webp" alt="" loading="lazy" />
+              <img class="ai-photo-card ai-photo-card-tall" src="/aigc/photography/photo-04.webp" alt="" loading="lazy" />
+              <img class="ai-photo-card ai-photo-card-tall" src="/aigc/photography/photo-05.webp" alt="" loading="lazy" />
+              <img class="ai-photo-card" src="/aigc/photography/photo-06.webp" alt="" loading="lazy" />
+              <img class="ai-photo-card ai-photo-card-tall" src="/aigc/photography/photo-07.webp" alt="" loading="lazy" />
+              <img class="ai-photo-card" src="/aigc/photography/photo-08.webp" alt="" loading="lazy" />
+              <img class="ai-photo-card ai-photo-card-square" src="/aigc/photography/photo-09.webp" alt="" loading="lazy" />
+              <img class="ai-photo-card ai-photo-card-tall" src="/aigc/photography/photo-10.webp" alt="" loading="lazy" />
+              <img class="ai-photo-card" src="/aigc/photography/photo-11.webp" alt="" loading="lazy" />
+              <img class="ai-photo-card ai-photo-card-tall" src="/aigc/photography/photo-12.webp" alt="" loading="lazy" />
+            </div>
+          </div>
+        </div>
+
+        <div class="ai-photo-marquee ai-photo-marquee-bottom">
+          <div class="ai-photo-track">
+            <div class="ai-photo-set">
+              <img class="ai-photo-card ai-photo-card-wide" src="/aigc/photography/photo-13.webp" alt="AI 美食摄影作品 13" loading="lazy" />
+              <img class="ai-photo-card" src="/aigc/photography/photo-14.webp" alt="AI 美食摄影作品 14" loading="lazy" />
+              <img class="ai-photo-card ai-photo-card-wide" src="/aigc/photography/photo-15.webp" alt="AI 美食摄影作品 15" loading="lazy" />
+              <img class="ai-photo-card ai-photo-card-tall" src="/aigc/photography/photo-16.webp" alt="AI 美食摄影作品 16" loading="lazy" />
+              <img class="ai-photo-card ai-photo-card-tall" src="/aigc/photography/photo-17.webp" alt="AI 美食摄影作品 17" loading="lazy" />
+              <img class="ai-photo-card" src="/aigc/photography/photo-18.webp" alt="AI 美食摄影作品 18" loading="lazy" />
+              <img class="ai-photo-card" src="/aigc/photography/photo-19.webp" alt="AI 美食摄影作品 19" loading="lazy" />
+              <img class="ai-photo-card ai-photo-card-wide" src="/aigc/photography/photo-20.webp" alt="AI 美食摄影作品 20" loading="lazy" />
+              <img class="ai-photo-card ai-photo-card-square" src="/aigc/photography/photo-21.webp" alt="AI 美食摄影作品 21" loading="lazy" />
+              <img class="ai-photo-card ai-photo-card-wide" src="/aigc/photography/photo-22.webp" alt="AI 美食摄影作品 22" loading="lazy" />
+              <img class="ai-photo-card ai-photo-card-wide" src="/aigc/photography/photo-23.webp" alt="AI 美食摄影作品 23" loading="lazy" />
+            </div>
+            <div class="ai-photo-set" aria-hidden="true">
+              <img class="ai-photo-card ai-photo-card-wide" src="/aigc/photography/photo-13.webp" alt="" loading="lazy" />
+              <img class="ai-photo-card" src="/aigc/photography/photo-14.webp" alt="" loading="lazy" />
+              <img class="ai-photo-card ai-photo-card-wide" src="/aigc/photography/photo-15.webp" alt="" loading="lazy" />
+              <img class="ai-photo-card ai-photo-card-tall" src="/aigc/photography/photo-16.webp" alt="" loading="lazy" />
+              <img class="ai-photo-card ai-photo-card-tall" src="/aigc/photography/photo-17.webp" alt="" loading="lazy" />
+              <img class="ai-photo-card" src="/aigc/photography/photo-18.webp" alt="" loading="lazy" />
+              <img class="ai-photo-card" src="/aigc/photography/photo-19.webp" alt="" loading="lazy" />
+              <img class="ai-photo-card ai-photo-card-wide" src="/aigc/photography/photo-20.webp" alt="" loading="lazy" />
+              <img class="ai-photo-card ai-photo-card-square" src="/aigc/photography/photo-21.webp" alt="" loading="lazy" />
+              <img class="ai-photo-card ai-photo-card-wide" src="/aigc/photography/photo-22.webp" alt="" loading="lazy" />
+              <img class="ai-photo-card ai-photo-card-wide" src="/aigc/photography/photo-23.webp" alt="" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <dialog class="ai-photo-lightbox" id="aiPhotoLightbox" aria-label="AI 摄影作品大图预览">
+        <button class="ai-photo-lightbox-close" id="aiPhotoLightboxClose" type="button" aria-label="关闭大图">×</button>
+        <figure><img id="aiPhotoLightboxImage" src="" alt="" /></figure>
+        <footer><span>AI PHOTOGRAPHY</span><span>点击空白处或按 ESC 关闭</span></footer>
+      </dialog>
+
+      <section class="brand-archive" id="brand-archive" aria-labelledby="brandArchiveTitle">
+        <div class="render-lab brand-render-lab" id="render-showcase" aria-labelledby="brandArchiveTitle">
+          <header class="showcase-head render-lab-head">
+            <div><p class="section-kicker">01 / Brand visual system</p><h2 id="brandArchiveTitle">品牌视觉</h2></div>
+            <p>从品牌档案到数字场景<br />构建完整而一致的视觉表达</p>
+          </header>
+          <div class="render-lab-stage" id="renderLabStage">
+            <figure class="render-main"><img id="renderMainImage" src="/works/c4d-posters/01.webp" alt="品牌产品场景渲染" /></figure>
+            <div class="render-lab-shade"></div>
+            <div class="render-lab-top"><span>BRAND VISUAL · C4D</span><span>COMMERCIAL CAMPAIGN · 2022—2024</span></div>
+            <div class="render-lab-copy"><small id="renderMeta">SCENE 01 / PRODUCT CAMPAIGN</small><h3 id="renderTitle">川味产品<br />视觉场景</h3><button class="glass" type="button" data-project="brand-all">查看全部品牌项目 <b>↗</b></button></div>
+            <div class="render-thumbs" role="tablist" aria-label="品牌视觉作品">
+              <button class="active" type="button" aria-selected="true" data-render-src="/works/c4d-posters/01.webp" data-render-title="川味产品|视觉场景" data-render-meta="SCENE 01 / PRODUCT CAMPAIGN"><img src="/works/c4d-posters/01.webp" alt="品牌视觉场景 01" loading="lazy" /><span>01</span></button>
+              <button type="button" aria-selected="false" data-render-src="/works/c4d-posters/02.webp" data-render-title="品牌角色|空间叙事" data-render-meta="SCENE 02 / CHARACTER WORLD"><img src="/works/c4d-posters/02.webp" alt="品牌视觉场景 02" loading="lazy" /><span>02</span></button>
+              <button type="button" aria-selected="false" data-render-src="/works/c4d-posters/03.webp" data-render-title="立体陈列|商业海报" data-render-meta="SCENE 03 / DISPLAY POSTER"><img src="/works/c4d-posters/03.webp" alt="品牌视觉场景 03" loading="lazy" /><span>03</span></button>
+              <button type="button" aria-selected="false" data-render-src="/works/c4d-posters/04.webp" data-render-title="活动氛围|立体构成" data-render-meta="SCENE 04 / FESTIVAL DISPLAY"><img src="/works/c4d-posters/04.webp" alt="品牌视觉场景 04" loading="lazy" /><span>04</span></button>
+              <button type="button" aria-selected="false" data-render-src="/works/c4d-posters/05.webp" data-render-title="产品组合|视觉引力" data-render-meta="SCENE 05 / PRODUCT GRAVITY"><img src="/works/c4d-posters/05.webp" alt="品牌视觉场景 05" loading="lazy" /><span>05</span></button>
+              <button type="button" aria-selected="false" data-render-src="/works/c4d-posters/06.webp" data-render-title="节点营销|角色海报" data-render-meta="SCENE 06 / CAMPAIGN POSTER"><img src="/works/c4d-posters/06.webp" alt="品牌视觉场景 06" loading="lazy" /><span>06</span></button>
+              <button type="button" aria-selected="false" data-render-src="/works/xiangliao-brand/06.webp" data-render-title="品牌活动|主视觉" data-render-meta="SCENE 07 / CAMPAIGN VISUAL"><img src="/works/xiangliao-brand/06.webp" alt="品牌活动主视觉" loading="lazy" /><span>07</span></button>
+              <button type="button" aria-selected="false" data-render-src="/works/jiuyuan-brand/04.webp" data-render-title="品牌空间|视觉系统" data-render-meta="SCENE 08 / SPATIAL IDENTITY"><img src="/works/jiuyuan-brand/04.webp" alt="品牌空间视觉系统" loading="lazy" /><span>08</span></button>
+              <button type="button" aria-selected="false" data-render-src="/works/xiangliao-brand/05.webp" data-render-title="品牌传播|邀请函" data-render-meta="SCENE 09 / BRAND COMMUNICATION"><img src="/works/xiangliao-brand/05.webp" alt="品牌传播邀请函" loading="lazy" /><span>09</span></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="packaging-runway" id="packaging-showcase" aria-labelledby="packagingShowcaseTitle">
+        <header class="showcase-head packaging-runway-head">
+          <div><p class="section-kicker">02 / Featured packaging</p><h2 id="packagingShowcaseTitle">山城风味礼盒</h2></div>
+          <p>向料 · 重庆小面调料<br />文旅伴手礼包装设计</p>
+        </header>
+        <div class="packaging-feature glass">
+          <div class="packaging-feature-media">
+            <img id="packagingFeatureImage" src="/works/xiangliao-priority/gift-full.jpg" alt="向料重庆小面调料文旅限定礼盒完整展示" />
+          </div>
+          <div class="packaging-feature-top"><span>XIANG LIAO · CHONGQING</span><span>FOOD GIFT PACKAGING · 2025</span></div>
+          <div class="packaging-feature-copy">
+            <small>LOCAL FLAVOUR / CULTURAL GIFT</small>
+            <strong>一城一味<br />地道重庆</strong>
+            <p>将山城轮廓、城市地标与五种重庆风味<br />收进一套可被带走的城市礼物。</p>
+            <button class="glass" type="button" data-project="xiangliao-packaging">查看完整项目 <b>↗</b></button>
+          </div>
+          <div class="packaging-feature-switcher" role="tablist" aria-label="向料礼盒展示视角">
+            <button class="active" type="button" aria-selected="true" data-packaging-src="/works/xiangliao-priority/gift-full.jpg" data-packaging-alt="向料重庆小面调料礼盒正面完整展示"><img src="/works/xiangliao-priority/gift-full.jpg" alt="礼盒全貌缩略图" /><span><b>01</b> 礼盒全貌</span></button>
+            <button type="button" aria-selected="false" data-packaging-src="/works/xiangliao-priority/gift-open.jpg" data-packaging-alt="向料重庆小面调料礼盒开盒完整展示"><img src="/works/xiangliao-priority/gift-open.jpg" alt="开盒陈列缩略图" /><span><b>02</b> 开盒陈列</span></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="ecommerce-flow" id="ecommerce-showcase" aria-labelledby="ecommerceShowcaseTitle">
+        <header class="showcase-head ecommerce-flow-head">
+          <div><p class="section-kicker">03 / E-commerce storytelling</p><h2 id="ecommerceShowcaseTitle">信息瀑布</h2></div>
+          <p>从卖点到场景持续向前<br />让每一次滚动推动转化</p>
+        </header>
+        <div class="ecommerce-flow-stage">
+          <div class="ecommerce-lane ecommerce-lane-a"><div class="ecommerce-strip"><div><img src="/works/details-priority/01.jpg" alt="重庆小面电商详情页" loading="lazy" /><img src="/works/details-priority/04.jpg" alt="酸菜底料电商详情页" loading="lazy" /><img src="/works/details-priority/07.jpg" alt="食品详情页优先展示作品 07" loading="lazy" /></div><div aria-hidden="true"><img src="/works/details-priority/01.jpg" alt="" loading="lazy" /><img src="/works/details-priority/04.jpg" alt="" loading="lazy" /><img src="/works/details-priority/07.jpg" alt="" loading="lazy" /></div></div><span>SELLING POINT / 01</span></div>
+          <div class="ecommerce-lane ecommerce-lane-b"><div class="ecommerce-strip"><div><img src="/works/details-priority/02.jpg" alt="金汤产品电商详情页" loading="lazy" /><img src="/works/details-priority/05.jpg" alt="番茄底料电商详情页" loading="lazy" /><img src="/works/details-priority/08.jpg" alt="藤椒产品电商详情页备选方案" loading="lazy" /></div><div aria-hidden="true"><img src="/works/details-priority/02.jpg" alt="" loading="lazy" /><img src="/works/details-priority/05.jpg" alt="" loading="lazy" /><img src="/works/details-priority/08.jpg" alt="" loading="lazy" /></div></div><span>SCENE & TASTE / 02</span></div>
+          <div class="ecommerce-lane ecommerce-lane-c"><div class="ecommerce-strip"><div><img src="/works/details-priority/03.jpg" alt="藤椒产品电商详情页" loading="lazy" /><img src="/works/details-priority/06.jpg" alt="食品详情页优先展示作品 06" loading="lazy" /></div><div aria-hidden="true"><img src="/works/details-priority/03.jpg" alt="" loading="lazy" /><img src="/works/details-priority/06.jpg" alt="" loading="lazy" /></div></div><span>CONVERSION PATH / 03</span></div>
+          <div class="ecommerce-flow-overlay"><small>DETAIL PAGE SYSTEM</small><strong>让信息被看见<br />让卖点被理解</strong><button class="glass" type="button" data-project="details-ecommerce">浏览完整长图 <b>↗</b></button></div>
+        </div>
+      </section>
+
+      <div class="marquee"><div class="marquee-inner"><span>BRAND DESIGN</span><i>·</i><span>PACKAGING</span><i>·</i><span>E-COMMERCE</span><i>·</i><span>MOTION</span><i>·</i><span>BRAND DESIGN</span><i>·</i><span>PACKAGING</span><i>·</i><span>E-COMMERCE</span><i>·</i><span>MOTION</span><i>·</i></div></div>
+
+      <dialog class="case-dialog" id="caseDialog" aria-labelledby="caseDialogTitle">
+        <header><div><small id="caseDialogMeta"></small><h2 id="caseDialogTitle"></h2></div><button class="glass case-dialog-close" id="caseDialogClose" aria-label="关闭项目">×</button></header>
+        <p class="case-dialog-summary" id="caseDialogSummary"></p>
+        <div class="case-dialog-gallery" id="caseDialogGallery"></div>
+      </dialog>
+
+      <dialog class="case-image-lightbox" id="caseImageLightbox" aria-label="作品大图预览">
+        <button class="glass case-image-lightbox-close" id="caseImageLightboxClose" type="button" aria-label="关闭大图">×</button>
+        <figure>
+          <img id="caseImageLightboxImage" src="" alt="" />
+          <figcaption><span id="caseImageLightboxCaption"></span><small>SCROLL TO VIEW FULL IMAGE</small></figcaption>
+        </figure>
+      </dialog>
+      <section class="dark-section" id="about"><p class="section-kicker">About the practice</p><h2>设计不只是让事物更好看，<br /><em>更是让信息被理解，价值被看见。</em></h2><div class="about-row"><p>从概念梳理、视觉系统到具体落地，我习惯在策略、审美和商业目标之间寻找平衡，让每一份作品既有鲜明表达，也经得起真实场景的检验。</p><div class="stat glass"><strong>5+</strong><span>年设计经验</span></div><div class="stat glass"><strong>30+</strong><span>商业项目</span></div></div></section>
+      <section class="contact" id="contact"><div class="glass contact-card"><p>Have a project in mind?</p><a href="mailto:hello@example.com">有一个值得实现的想法？<br /><em>一起让它发生。</em> <span>↗</span></a></div></section>
+    </main>
+    <button class="glass back-to-top" id="backToTop" type="button" aria-label="回到页面开头">
+      <span>回到开头</span><b aria-hidden="true">↑</b>
+    </button>
+  </body>
+</html>
