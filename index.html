@@ -10,7 +10,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
     <script type="module" crossorigin src="/assets/index-D18dmIE9.js"></script>
+    <script type="module" src="/assets/packaging-browser.js"></script>
+    <script type="module" src="/assets/about-experience.js"></script>
+    <script type="module" src="/assets/contact-card.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-CROy13IS.css">
+    <link rel="stylesheet" href="/assets/experience-overrides.css">
   </head>
   <body>
     <div class="loader" id="loader" aria-live="polite">
@@ -247,6 +251,37 @@
         <div class="case-dialog-gallery" id="caseDialogGallery"></div>
       </dialog>
 
+      <dialog class="packaging-browser" id="packagingBrowser" aria-labelledby="packagingBrowserTitle">
+        <div class="packaging-browser-shell">
+          <header class="packaging-browser-header">
+            <div><small>SELECTED WORKS · 2020—2025</small><h2 id="packagingBrowserTitle">包装设计</h2></div>
+            <button class="packaging-browser-close" id="packagingBrowserClose" type="button" aria-label="关闭包装作品浏览">×</button>
+          </header>
+          <div class="packaging-browser-filter" aria-label="作品分类">
+            <button class="active" type="button" data-packaging-filter="all">全部包装 <b>21</b></button>
+            <button type="button" data-packaging-filter="paper">纸品包装 <b>11</b></button>
+            <button type="button" data-packaging-filter="gift">礼盒包装 <b>04</b></button>
+            <button type="button" data-packaging-filter="food">食品包装 <b>07</b></button>
+            <button type="button" data-packaging-filter="ip">IP 包装 <b>07</b></button>
+          </div>
+          <div class="packaging-browser-stage" id="packagingBrowserStage">
+            <button class="packaging-browser-nav packaging-browser-prev" id="packagingBrowserPrev" type="button" aria-label="上一件作品">←</button>
+            <button class="packaging-browser-card is-prev" type="button" aria-label="上一件包装作品"><img alt="" /></button>
+            <button class="packaging-browser-card is-current" type="button" aria-label="查看当前包装作品大图"><img alt="" /></button>
+            <button class="packaging-browser-card is-next" type="button" aria-label="下一件包装作品"><img alt="" /></button>
+            <div class="packaging-browser-copy" aria-hidden="true">
+              <span class="packaging-browser-tag">PACKAGING DESIGN</span>
+              <span class="packaging-browser-caption"><small id="packagingBrowserKicker"></small><strong id="packagingBrowserName"></strong><em>点击查看大图 ↗</em></span>
+            </div>
+            <button class="packaging-browser-nav packaging-browser-next" id="packagingBrowserNext" type="button" aria-label="下一件作品">→</button>
+          </div>
+          <footer class="packaging-browser-footer"><span><kbd>←</kbd><kbd>→</kbd> 键盘或滚轮切换</span><strong><b id="packagingBrowserIndex">01</b> / <i id="packagingBrowserCount">21</i></strong></footer>
+        </div>
+        <div class="packaging-browser-zoom" id="packagingBrowserZoom" aria-hidden="true">
+          <button id="packagingBrowserZoomClose" type="button" aria-label="关闭大图">×</button><img id="packagingBrowserZoomImage" alt="" />
+        </div>
+      </dialog>
+
       <dialog class="case-image-lightbox" id="caseImageLightbox" aria-label="作品大图预览">
         <button class="glass case-image-lightbox-close" id="caseImageLightboxClose" type="button" aria-label="关闭大图">×</button>
         <figure>
@@ -254,77 +289,110 @@
           <figcaption><span id="caseImageLightboxCaption"></span><small>SCROLL TO VIEW FULL IMAGE</small></figcaption>
         </figure>
       </dialog>
-      <section class="dark-section" id="about">
-        <p class="section-kicker">About the practice</p>
-        <h2>设计不只是让事物更好看，<br /><em>更是让信息被理解，价值被看见。</em></h2>
-        <div class="about-row">
-          <p>从概念梳理、视觉系统到具体落地，我习惯在策略、审美和商业目标之间寻找平衡，让每一份作品既有鲜明表达，也经得起真实场景的检验。</p>
-          <div class="stat glass"><strong>11</strong><span>年设计经验</span></div>
+      <section class="about-experience" id="about" aria-label="关于孙华建">
+        <div class="about-story-track" id="aboutStoryTrack">
+          <div class="about-story-stage">
+            <div class="about-aurora" id="aboutAurora"></div>
+            <div class="about-bio">
+              <p>ABOUT SUN HUAJIAN</p>
+              <h2 aria-label="我是孙华建，一名相信设计应同时服务信息、品牌与真实商业目标的视觉设计师。">
+                <span>我是</span><strong>孙华建，</strong><span>一名相信设计应同时服务</span><em>信息、品牌</em><span>与真实商业目标的</span><strong>视觉设计师。</strong>
+              </h2>
+            </div>
+            <div class="about-card-stack" aria-hidden="true">
+              <article class="about-role-card"><small>01 //</small><h3>策略</h3><p>STRATEGY</p></article>
+              <article class="about-role-card"><small>02 //</small><h3>视觉</h3><p>VISUAL</p></article>
+              <article class="about-role-card"><small>03 //</small><h3>商业</h3><p>BUSINESS</p></article>
+              <article class="about-role-card"><small>04 //</small><h3>落地</h3><p>DELIVERY</p></article>
+            </div>
+            <figure class="about-portrait" id="aboutPortrait" aria-hidden="true">
+              <img src="/assets/sun-huajian-portrait.png" alt="" />
+            </figure>
+            <div class="about-scroll-prompt"><span>继续滚动</span><i></i></div>
+          </div>
         </div>
 
-        <section class="experience" aria-labelledby="experience-title">
-          <header class="experience-heading">
-            <div>
-              <p class="section-kicker">2015 — NOW · EXPERIENCE</p>
-              <h3 id="experience-title">工作经历</h3>
+        <div class="about-horizontal" id="aboutHorizontal">
+          <div class="about-horizontal-pin">
+            <div class="about-watermark">DESIGNER</div>
+            <div class="about-horizontal-track" id="aboutHorizontalTrack">
+              <article class="about-panel about-pitch">
+                <div class="about-pitch-grid">
+                  <h2>策略<br />审美<br /><em>落地</em></h2>
+                  <div>
+                    <p class="about-lead">我不只完成一张好看的画面，也把品牌想说的话，转化成用户愿意看、能够懂、记得住的视觉体验。</p>
+                    <p class="about-body">从概念梳理、视觉系统到具体执行，我习惯在策略、审美和商业目标之间寻找平衡。品牌、包装、电商、线下物料与 AIGC，是不同媒介，也是同一套设计思维在真实场景中的延伸。</p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="about-panel about-impact">
+                <p class="about-panel-label">01 // EXPERIENCE IN NUMBERS</p>
+                <div class="about-metric-grid">
+                  <div><strong>11</strong><span>年设计经验</span></div>
+                  <div><strong>06</strong><span>段品牌与商业实践</span></div>
+                  <div><strong>05</strong><span>类核心设计能力</span></div>
+                </div>
+              </article>
+
+              <article class="about-panel about-story">
+                <p class="about-panel-label">02 // MY PRACTICE</p>
+                <div class="about-story-grid">
+                  <blockquote>“设计不只是让事物更好看，<br />更是让信息被理解，<em>价值被看见。</em>”</blockquote>
+                  <div>
+                    <p class="about-body">我的职业起点是平面与印刷。对版式、字体、信息层级和落地工艺的长期训练，让我建立了对细节与秩序的敏感。</p>
+                    <p class="about-body">之后，我把这套能力带进品牌、电商、包装、活动与 AI 视觉。面对不同项目，我会先理解产品与受众，再选择视觉语言，而不是让风格先于问题。</p>
+                    <p class="about-body"><strong>作品最终需要进入市场、进入空间、进入人的日常，这也是我判断设计价值的方式。</strong></p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="about-panel about-capabilities">
+                <p class="about-panel-label">03 // CAPABILITIES</p>
+                <div class="about-capability-grid">
+                  <section><h3>品牌视觉</h3><ul><li>品牌识别与视觉系统 <span>CORE</span></li><li>活动与线下物料 <span>APPLIED</span></li><li>卡通形象与 IP <span>EXPERIENCED</span></li></ul></section>
+                  <section><h3>商业设计</h3><ul><li>包装与产品视觉 <span>CORE</span></li><li>电商页面与内容 <span>CORE</span></li><li>广告与短视频 <span>APPLIED</span></li></ul></section>
+                  <section><h3>新型表达</h3><ul><li>AIGC 视觉生成 <span>DAILY</span></li><li>三维与动态视觉 <span>APPLIED</span></li><li>跨媒介视觉落地 <span>CORE</span></li></ul></section>
+                </div>
+              </article>
+
+              <article class="about-panel about-career">
+                <p class="about-panel-label">04 // 2015—NOW · CAREER</p>
+                <div class="about-career-grid">
+                  <section><time>2015—2019</time><h3>重庆泰昌印务</h3><p>平面设计</p></section>
+                  <section><time>2019—2022</time><h3>理文造纸</h3><p>品牌设计</p></section>
+                  <section><time>2022</time><h3>朝天门码头</h3><p>电商设计</p></section>
+                  <section><time>2022—2023</time><h3>雅思载道传媒</h3><p>平面设计</p></section>
+                  <section><time>2023—2025</time><h3>稻町原酿食品</h3><p>设计经理</p></section>
+                  <section><time>2025—至今</time><h3>向料品牌管理</h3><p>品牌设计</p></section>
+                </div>
+                <p class="about-career-note">从印刷与平面设计出发，持续拓展至品牌、电商、包装、线下视觉与 AI 设计。</p>
+              </article>
             </div>
-            <p>从平面与品牌设计出发，持续拓展至电商、包装、线下视觉与 AI 设计。</p>
-          </header>
-          <div class="experience-scroll" tabindex="0" aria-label="工作经历时间轴，可横向滚动">
-            <ol class="experience-track">
-              <li class="experience-item">
-                <div class="experience-card">
-                  <h4>重庆泰昌印务</h4>
-                  <p>平面设计</p>
-                  <time>2015/02 — 2019/04</time>
-                  <ul><li>党政机关期刊排版设计</li><li>民间协会与校园刊物画册设计</li><li>广告画册、海报及零售品包装设计</li><li>商场 POP 设计</li></ul>
-                </div>
-              </li>
-              <li class="experience-item">
-                <div class="experience-card">
-                  <h4>理文造纸</h4>
-                  <p>品牌设计</p>
-                  <time>2019/05 — 2022/01</time>
-                  <ul><li>各电商平台视觉设计</li><li>自主品牌与 OEM 包装设计</li><li>线上线下广告及短视频制作</li><li>VI、卡通形象与活动展会物料设计</li></ul>
-                </div>
-              </li>
-              <li class="experience-item">
-                <div class="experience-card">
-                  <h4>朝天门码头</h4>
-                  <p>电商设计</p>
-                  <time>2022/02 — 2022/09</time>
-                  <ul><li>各电商平台视觉设计</li><li>卡通形象设计</li><li>朝天门码头线下视觉物料设计</li><li>九园线上线下视觉物料设计</li></ul>
-                </div>
-              </li>
-              <li class="experience-item">
-                <div class="experience-card">
-                  <h4>雅思载道传媒</h4>
-                  <p>平面设计</p>
-                  <time>2022/10 — 2023/06</time>
-                  <ul><li>商业会展设计</li><li>政府机关与校园文化设计</li><li>企业文化设计</li><li>户外广告设计</li></ul>
-                </div>
-              </li>
-              <li class="experience-item">
-                <div class="experience-card">
-                  <h4>重庆稻町原酿食品</h4>
-                  <p>设计经理</p>
-                  <time>2023/07 — 2025/03</time>
-                  <ul><li>负责公司全线设计工作</li><li>品牌与电商设计</li><li>线下物料与包装设计</li><li>AI 设计</li></ul>
-                </div>
-              </li>
-              <li class="experience-item">
-                <div class="experience-card">
-                  <h4>重庆向料品牌管理</h4>
-                  <p>品牌设计</p>
-                  <time>2025/03 — 至今</time>
-                  <ul><li>品牌设计</li><li>电商设计</li><li>线下物料与包装设计</li><li>AI 设计</li></ul>
-                </div>
-              </li>
-            </ol>
+            <div class="about-panel-progress"><span id="aboutPanelProgress"></span></div>
           </div>
-        </section>
+        </div>
       </section>
-      <section class="contact" id="contact"><div class="glass contact-card"><p>Have a project in mind?</p><a href="mailto:hello@example.com">有一个值得实现的想法？<br /><em>一起让它发生。</em> <span>↗</span></a></div></section>
+      <section class="contact" id="contact"><div class="glass contact-card"><p>Have a project in mind?</p><button class="contact-card-open" id="contactCardOpen" type="button">有一个值得实现的想法？<br /><em>一起让它发生。</em> <span>↗</span></button></div></section>
+      <dialog class="contact-dialog" id="contactDialog" aria-labelledby="contactDialogTitle">
+        <button class="contact-dialog-close" id="contactDialogClose" type="button" aria-label="关闭联系方式">×</button>
+        <div class="contact-dialog-head">
+          <p>LET'S WORK TOGETHER</p>
+          <h2 id="contactDialogTitle">保持联系</h2>
+          <span>如果你有一个值得实现的想法，欢迎和我聊聊。</span>
+        </div>
+        <div class="contact-dialog-list">
+          <div class="contact-dialog-item">
+            <div><small>PHONE · WECHAT</small><strong>177 8381 0827</strong><span>微信同号</span></div>
+            <div class="contact-dialog-actions"><button type="button" data-copy="17783810827">复制</button><a href="tel:17783810827" aria-label="拨打电话">↗</a></div>
+          </div>
+          <div class="contact-dialog-item">
+            <div><small>EMAIL</small><strong>291131024@qq.com</strong><span>项目合作与工作联系</span></div>
+            <div class="contact-dialog-actions"><button type="button" data-copy="291131024@qq.com">复制</button><a href="mailto:291131024@qq.com" aria-label="发送邮件">↗</a></div>
+          </div>
+        </div>
+        <p class="contact-dialog-status" id="contactDialogStatus" aria-live="polite"></p>
+      </dialog>
     </main>
     <button class="glass back-to-top" id="backToTop" type="button" aria-label="回到页面开头">
       <span>回到开头</span><b aria-hidden="true">↑</b>
