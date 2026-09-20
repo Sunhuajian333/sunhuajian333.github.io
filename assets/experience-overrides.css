@@ -315,8 +315,13 @@
 .contact-dialog-status { min-height: 18px; margin-top: 16px; color: rgba(255,255,255,.55); font-size: 10px; text-align: right; }
 
 .ecommerce-flow-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: min(620px, 80%);
-  padding: 36px;
+  min-height: 330px;
+  padding: 38px 36px;
 }
 
 .ecommerce-flow-overlay > h3 {
@@ -326,6 +331,7 @@
   font-size: clamp(46px, 5.2vw, 72px);
   font-weight: 800;
   line-height: .92;
+  white-space: nowrap;
 }
 
 .ecommerce-flow-overlay > em {
@@ -337,7 +343,10 @@
   font-style: italic;
   font-weight: 300;
   line-height: 1;
+  white-space: nowrap;
 }
+
+.ecommerce-flow-overlay > button { flex: 0 0 auto; margin-top: 30px; }
 
 .center-reveal {
   --reveal-cut: 50%;
@@ -399,7 +408,7 @@
   .contact-dialog-actions { width: 100%; }
   .contact-dialog-actions button { flex: 1; }
 
-  .ecommerce-flow-overlay { width: calc(100vw - 68px); padding: 28px 22px; }
+  .ecommerce-flow-overlay { width: calc(100vw - 68px); min-height: 300px; padding: 30px 22px; }
   .ecommerce-flow-overlay > h3 { font-size: clamp(36px, 9.5vw, 52px); }
   .ecommerce-flow-overlay > em { font-size: clamp(28px, 7.5vw, 40px); }
 }

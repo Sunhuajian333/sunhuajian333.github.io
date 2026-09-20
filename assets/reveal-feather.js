@@ -9,7 +9,8 @@ if (reveal && hero) {
     frame = 0;
     const range = Math.max(1, hero.offsetHeight - window.innerHeight);
     const pageProgress = clamp(window.scrollY / range);
-    const revealProgress = clamp((pageProgress - 0.59) / 0.41);
+    const rawReveal = clamp((pageProgress - 0.52) / 0.48);
+    const revealProgress = Math.pow(rawReveal, 1.45);
     const cut = 50 * (1 - revealProgress);
     const clip = `inset(0 ${cut}% round 0px)`;
 
