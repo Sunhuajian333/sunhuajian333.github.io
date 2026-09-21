@@ -7,6 +7,7 @@ const featureTitle = document.querySelector("#packagingFeatureTitle");
 const featureCopy = document.querySelector("#packagingFeatureCopy");
 const featureProject = document.querySelector("#packagingFeatureProject");
 const featureTabs = [...document.querySelectorAll(".packaging-feature-switcher button")];
+const laotanEndingImage = "/works/laotan-packaging/ending.webp";
 
 function setTwoLineText(element, value = "") {
   const [first, second = ""] = value.split("|");
@@ -47,6 +48,17 @@ featureTabs.forEach((tab) => {
     featureVideo.currentTime = 0;
     featureVideo.play().catch(() => {});
   });
+});
+
+featureVideo.addEventListener("ended", () => {
+  featureImage.src = laotanEndingImage;
+  featureImage.alt = "老坛酸菜面调料包装场景展示";
+  featureImage.classList.remove("media-hidden");
+  featureVideo.classList.remove("active");
+  featureImage.animate(
+    [{ opacity: .35 }, { opacity: 1 }],
+    { duration: 420, easing: "ease-out" },
+  );
 });
 
 const packagingSection = document.querySelector("#packaging-showcase");
