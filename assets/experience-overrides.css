@@ -4,6 +4,28 @@
   transform-origin: 50% 50%;
 }
 
+/* Packaging feature: video-led case study */
+.packaging-feature-media > video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.packaging-feature-media > video.active {
+  display: block;
+  animation: packagingVideoReveal 520ms cubic-bezier(.2, .75, .2, 1);
+}
+
+.packaging-feature-media > img.media-hidden {
+  display: none;
+}
+
+@keyframes packagingVideoReveal {
+  from { opacity: .18; transform: scale(1.025); }
+  to { opacity: 1; transform: scale(1); }
+}
+
 /* Rectangular cards orbit on a six-sided track; perspective creates the slim side planes. */
 #packagingBrowser .packaging-browser-card.is-prev {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
