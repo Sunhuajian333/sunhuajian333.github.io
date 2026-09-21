@@ -1,14 +1,15 @@
+import { packagingItems } from './packaging-library-data.js';
+
 const packagingBrowser = document.querySelector('#packagingBrowser');
 
 if (packagingBrowser) {
   const filters = {
-    all: Array.from({ length: 21 }, (_, index) => index),
-    paper: [0, 1, 2, 3, 4, 5, 6, 7, 10, 11, 12],
-    gift: [3, 4, 8, 20],
-    food: [8, 9, 13, 14, 15, 16, 20],
-    ip: [7, 9, 10, 13, 17, 18, 19]
+    all: packagingItems.map((_, index) => index),
+    paper: packagingItems.flatMap((item, index) => item.category === 'paper' ? [index] : []),
+    gift: packagingItems.flatMap((item, index) => item.category === 'gift' ? [index] : []),
+    food: packagingItems.flatMap((item, index) => item.category === 'food' ? [index] : [])
   };
-  const imagePath = (index) => `/works/packaging-all/${String(index + 1).padStart(2, '0')}.webp`;
+  const imagePath = (index) => packagingItems[index]?.src || '';
   const triggers = [...document.querySelectorAll('[data-project="packaging-all"]')].map((trigger) => {
     const cleanTrigger = trigger.cloneNode(true);
     trigger.replaceWith(cleanTrigger);
@@ -44,10 +45,11 @@ if (packagingBrowser) {
 
   const renderMeta = () => {
     const currentItem = activeItems[activeIndex];
-    indexLabel.textContent = String(activeIndex + 1).padStart(2, '0');
-    countLabel.textContent = String(activeItems.length).padStart(2, '0');
-    kicker.textContent = `${String(currentItem + 1).padStart(2, '0')} // SELECTED PACKAGING`;
-    name.textContent = `包装设计精选 ${String(currentItem + 1).padStart(2, '0')}`;
+    const item = packagingItems[currentItem];
+    indexLabel.textContent = String(activeIndex + 1).padStart(3, '0');
+    countLabel.textContent = String(activeItems.length).padStart(3, '0');
+    kicker.textContent = `${String(currentItem + 1).padStart(3, '0')} // ${item.collection}`;
+    name.textContent = item.title;
   };
 
   const resetCards = () => {
@@ -102,6 +104,9 @@ if (packagingBrowser) {
   });
 
   filterButtons.forEach((button) => {
+    const items = filters[button.dataset.packagingFilter] || filters.all;
+    const count = button.querySelector('b');
+    if (count) count.textContent = String(items.length).padStart(2, '0');
     button.addEventListener('click', () => {
       activeItems = filters[button.dataset.packagingFilter] || filters.all;
       activeIndex = 0;
@@ -170,7 +175,7 @@ if (packagingBrowser) {
 
   packagingBrowser.addEventListener('close', closeZoom);
 
-  [0, 1, 2].forEach((index) => {
+  filters.all.slice(0, 3).forEach((index) => {
     const preload = new Image();
     preload.src = imagePath(index);
   });
