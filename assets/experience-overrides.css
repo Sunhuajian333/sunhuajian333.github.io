@@ -118,8 +118,25 @@
 .about-role-card:nth-child(3) { z-index: 3; transform: translate(3vw, -3vh) rotate(4deg); }
 .about-role-card:nth-child(4) { z-index: 4; transform: translate(8vw, 3vh) rotate(9deg); }
 .about-role-card small { letter-spacing: .18em; color: rgba(255,255,255,.5); font-size: 8px; }
-.about-role-card h3 { margin-top: 18px; letter-spacing: -.07em; font-size: clamp(52px, 6vw, 84px); font-weight: 300; line-height: .9; }
-.about-role-card p { position: absolute; right: 30px; bottom: 26px; letter-spacing: .24em; color: rgba(255,255,255,.4); font-size: 8px; }
+.about-role-card h3 {
+  margin-top: 17px;
+  line-height: .88;
+}
+.about-role-card h3 span {
+  display: block;
+  margin-bottom: 10px;
+  color: rgba(255,255,255,.72);
+  letter-spacing: -.04em;
+  font-size: clamp(22px, 2.25vw, 34px);
+  font-weight: 300;
+}
+.about-role-card h3 strong {
+  display: block;
+  color: #fff;
+  letter-spacing: -.07em;
+  font-size: clamp(40px, 4.75vw, 70px);
+  font-weight: 800;
+}
 
 .about-portrait {
   position: absolute;
