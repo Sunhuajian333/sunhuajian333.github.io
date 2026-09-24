@@ -211,7 +211,7 @@
       (function () {
         "use strict";
 
-        var VIDEO_URL = "/works/laotan-packaging/scroll.mp4";
+        var VIDEO_URL = "/works/laotan-packaging/scroll-scrub.mp4";
         var clip = document.getElementById("clip");
         var boot = document.getElementById("boot");
         var bootBar = document.getElementById("bootBar");
@@ -224,7 +224,6 @@
         var DRIFT = 22;
         var progress = 0;
         var seekTo = 0;
-        var seekAt = 0;
         var duration = 0;
         var ready = false;
         var started = false;
@@ -252,14 +251,10 @@
           });
         }
         function frame() {
-          if (ready && duration) {
-            var gap = seekTo - seekAt;
-            if (Math.abs(gap) > .0008) {
-              seekAt += gap * .115;
-              if (clip.readyState >= 2 && !clip.seeking) {
-                try { clip.currentTime = seekAt; } catch (error) {}
-              }
-            }
+          if (ready && duration && clip.readyState >= 2 && !clip.seeking
+              && Math.abs(seekTo - clip.currentTime) > 1 / 48) {
+            // Follow the latest wheel position directly; easing currentTime creates visible lag.
+            try { clip.currentTime = seekTo; } catch (error) {}
           }
           paint();
           requestAnimationFrame(frame);
@@ -274,7 +269,6 @@
           ready = true;
           boot.classList.add("done");
           readScroll();
-          seekAt = seekTo;
         }
         function attach(src) {
           if (attached) return;
@@ -283,8 +277,7 @@
             duration = clip.duration || 0;
             clip.pause();
             readScroll();
-            seekAt = seekTo;
-            try { clip.currentTime = seekAt; } catch (error) {}
+            try { clip.currentTime = seekTo; } catch (error) {}
           });
           clip.addEventListener("loadeddata", start);
           clip.addEventListener("canplaythrough", start);

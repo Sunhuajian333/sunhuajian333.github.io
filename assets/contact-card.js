@@ -1,10 +1,16 @@
 const dialog = document.querySelector('#contactDialog');
 const openButton = document.querySelector('#contactCardOpen');
+const contactButtons = document.querySelectorAll('[data-contact-open]');
 const closeButton = document.querySelector('#contactDialogClose');
 const status = document.querySelector('#contactDialogStatus');
 
 if (dialog && openButton && closeButton) {
-  openButton.addEventListener('click', () => dialog.showModal());
+  const openDialog = () => {
+    if (!dialog.open) dialog.showModal();
+  };
+
+  openButton.addEventListener('click', openDialog);
+  contactButtons.forEach((button) => button.addEventListener('click', openDialog));
   closeButton.addEventListener('click', () => dialog.close());
 
   dialog.addEventListener('click', (event) => {

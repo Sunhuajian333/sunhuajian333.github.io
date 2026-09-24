@@ -319,6 +319,7 @@
 .contact-card .contact-card-open em { font-family: var(--serif); color: rgba(255,255,255,.52); font-weight: 400; }
 .contact-card .contact-card-open span { display: inline-grid; place-items: center; width: 1.08em; height: 1.08em; margin-left: .15em; border: 1px solid rgba(255,255,255,.32); border-radius: 50%; font-size: .42em; vertical-align: .15em; transition: transform .3s ease, background .3s ease, color .3s ease; }
 .contact-card .contact-card-open:hover span { color: #050608; background: #fff; transform: translate(3px, -3px); }
+.nav-links button.nav-cta { cursor: pointer; border: 0; }
 
 .contact-dialog {
   color: #fff;
